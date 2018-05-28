@@ -7,7 +7,7 @@ module Ayrton
                 :duration,
                 :average_speed
 
-    REGEX = /^(\d{2}:\d{2}:\d{2}\.\d{3})\s+(\d{3}) – ([A-Z]\.[A-Z]+)\s+(\d+)\s+(\d+:\d+\.\d{3})\s+(\d+,\d{3})/.freeze
+    REGEX = /^(\d{2}:\d{2}:\d{2}\.\d{3})\s+(\d{3}) – ([A-Z]\.[A-Z]+)\s+(\d+)\s+(\d+:\d+\.\d{3})\s+(\d+,\d+)/.freeze
     
     def initialize(time:,
                    racer:,
@@ -32,8 +32,8 @@ module Ayrton
       new(time: $1,
           racer: racer,
           number: $4,
-          duration: $5,
-          average_speed: $6)
+          duration: Duration.parse($5),
+          average_speed: $6.gsub(',','.').to_f)
     end
   end
 end
