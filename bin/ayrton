@@ -4,6 +4,12 @@ require "ayrton"
 file = ARGV[0]
 file = File.expand_path("../../#{file}", __FILE__)
 
+if !File.exists?(file)
+  puts 'ERROR: File doesn\'t exist.'
+  puts 'Usage: "ayrton FILE"'
+  exit(1)
+end
+
 race = Ayrton::Race.from_file(file)
 race.positions.each.with_index(1) do |r,i| 
   puts "%s\t %s\t %s\t %s\t %s" % [
