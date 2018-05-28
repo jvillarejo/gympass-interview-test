@@ -1,11 +1,23 @@
 # Ayrton
 
-Posição Chegada, Código Piloto, Nome Piloto, Qtde Voltas Completadas e Tempo Total de Prova.
+## Gympass Inteview Test
 
-Descobrir a melhor volta de cada piloto
-Descobrir a melhor volta da corrida
-Calcular a velocidade média de cada piloto durante toda corrida
-Descobrir quanto tempo cada piloto chegou após o vencedor
+### Things needed
+
+* Arrival Position
+* Racer Code
+* Racer Name
+* Number of completed Laps
+* Total time of race
+
+
+### Bonus 
+* Best lap time per each racer
+* Best lap of the race
+* Average Speed per each racer for all the race
+* Difference in time between each position and the winner racer
+
+[Link to test reference](https://github.com/Gympass/interview-test)
 
 ## Installation
 
