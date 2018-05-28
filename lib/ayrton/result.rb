@@ -20,6 +20,10 @@ module Ayrton
       laps.map(&:average_speed).sum / laps.size
     end
 
+    def diff(other)
+      total_time - other.total_time
+    end
+
     def total_laps
       laps.size
     end

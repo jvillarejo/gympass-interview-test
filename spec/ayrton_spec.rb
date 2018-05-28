@@ -17,9 +17,12 @@ RSpec.describe Ayrton do
     subject(:result) { race.results.first }
 
     it { expect(result.total_time.seconds).to eq(251.578) }
+    it { expect(result.total_time.to_s).to eq('4:11.578') }
     it { expect(result.best_lap.duration.to_s).to eq('1:02.769')}
     it { expect(result.total_laps).to eq(4) }
     it { expect(result.average_speed).to eq(44.24575) }
+
+    it { expect(race.positions.last.diff(result).seconds.round(3)).to eq(135.698)}
   end
 
   describe Ayrton::Duration do 

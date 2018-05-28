@@ -12,11 +12,14 @@ end
 
 race = Ayrton::Race.from_file(file)
 race.positions.each.with_index(1) do |r,i| 
-  puts "%s\t %s\t %s\t %s\t %s" % [
+  puts "%s\t %s\t %s\t %s\t %s\t %s\t %.3f\t  +%s" % [
                       i, 
                       r.racer.code, 
                       r.racer.name.strip,
                       r.total_laps,
-                      r.total_time.to_s
+                      r.total_time.to_s,
+                      r.best_lap.duration.to_s,
+                      r.average_speed,
+                      r.diff(race.top)
                     ]
 end

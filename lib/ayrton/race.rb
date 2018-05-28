@@ -19,6 +19,10 @@ module Ayrton
       results.sort_by(&:total_time)
     end
 
+    def top
+      positions.first
+    end
+
     def best_lap
       results.flat_map(&:laps).min
     end
