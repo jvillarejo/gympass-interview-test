@@ -12,6 +12,14 @@ module Ayrton
       laps.map(&:duration).inject(&:+)
     end
 
+    def best_lap
+      laps.min
+    end
+
+    def average_speed
+      laps.map(&:average_speed).sum / laps.size
+    end
+
     def total_laps
       laps.size
     end

@@ -19,6 +19,10 @@ module Ayrton
       results.sort_by(&:total_time)
     end
 
+    def best_lap
+      results.flat_map(&:laps).min
+    end
+
     def self.from_file(filename)
       results = File.readlines(filename)
                    .select

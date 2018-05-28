@@ -5,6 +5,8 @@ module Ayrton
                 :duration,
                 :average_speed
 
+    include Comparable
+
     def initialize(time:,
                    number:,
                    duration:,
@@ -16,5 +18,8 @@ module Ayrton
       @average_speed = average_speed
     end
 
+    def <=>(other)
+      duration <=> other.duration
+    end
   end
 end
