@@ -12,6 +12,14 @@ module Ayrton
       seconds <=> other.seconds
     end
 
+    def to_s
+      '%d:%06.3f' % [seconds / 60, seconds - 60]
+    end
+
+    def +(other)
+      self.class.new(seconds + other.seconds)
+    end
+
     def self.parse(str)
       /(\d+):(\d+\.\d+)/.match(str)
 

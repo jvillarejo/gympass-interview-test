@@ -1,8 +1,11 @@
 # Ayrton
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ayrton`. To experiment with that code, run `bin/console` for an interactive prompt.
+Posição Chegada, Código Piloto, Nome Piloto, Qtde Voltas Completadas e Tempo Total de Prova.
 
-TODO: Delete this and the text above, and describe your gem
+Descobrir a melhor volta de cada piloto
+Descobrir a melhor volta da corrida
+Calcular a velocidade média de cada piloto durante toda corrida
+Descobrir quanto tempo cada piloto chegou após o vencedor
 
 ## Installation
 
